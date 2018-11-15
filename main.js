@@ -33,13 +33,13 @@ function render(){
 const requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.mozRequestAnimationFrame;
 
 var then = performance.now();
-var mainLoop = function () {
+function mainLoop() {
 	var now = performance.now();
 	var delta = now - then;
 	update(delta / 1000);
 	render();
 	then = now;
-	requestAnimationFrame(mainLoop);	
+	requestAnimationFrame(mainLoop());	
 }
 
 document.addEventListener('DOMContentLoaded', function(){
