@@ -39,7 +39,7 @@ function mainLoop() {
 	update(delta / 1000);
 	render();
 	then = now;
-	requestAnimationFrame(mainLoop());	
+	requestAnimationFrame(mainLoop);	
 }
 
 document.addEventListener('DOMContentLoaded', function(){
